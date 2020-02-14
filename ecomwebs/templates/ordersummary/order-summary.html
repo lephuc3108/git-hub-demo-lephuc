@@ -1,0 +1,108 @@
+{% extends 'ordersummary/base.html' %}
+
+{% load static %}
+
+{% block cssblock %}
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Hind:400,700" rel="stylesheet">
+
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="{% static 'homepage/css/bootstrap.min.css' %}" />
+
+	<!-- Slick -->
+	<link type="text/css" rel="stylesheet" href="{% static 'homepage/css/slick.css' %}" />
+	<link type="text/css" rel="stylesheet" href="{% static 'homepage/css/slick-theme.css' %}" />
+
+	<!-- nouislider -->
+	<link type="text/css" rel="stylesheet" href="{% static 'homepage/css/nouislider.min.css' %}" />
+
+	<!-- Font Awesome Icon -->
+	<link rel="stylesheet" href="{% static 'homepage/css/font-awesome.min.css' %}">
+
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="{% static 'homepage/css/style.css' %}" />
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+{% endblock %}
+
+{% block content %}
+<div><h2 style="color: orange; text-align: center; padding-top: 10px; padding-bottom: 10px;"><b>ORDER SUMMARY</b></h2></div>
+<div class="table-responsive text-nowrap">
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Item title</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Total price</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for order_item in object.items.all %}
+      <tr>
+        <th scope="row">{{ forloop.counter }}</th>
+        <td>{{ order_item.item.title }}</td>
+        <td>{{ order_item.item.price }}</td>
+        <td>
+            <a href="{% url 'core:remove-single-item-from-cart' order_item.item.slug %}"><i class="fas fa-minus mr-2"></i></a>
+            {{ order_item.quantity }}
+            <a href="{% url 'core:add-to-cart' order_item.item.slug %}"><i class="fas fa-plus ml-2"></i></a>
+        </td>
+        <td>
+            {% if order_item.item.discount_price %}
+                ${{ order_item.get_total_item_discount_price }}
+                (Saving ${{ order_item.get_amount_saved }})
+            {% else %}
+                ${{ order_item.get_total_item_price }}
+            {% endif %}
+            <a href="{% url 'core:remove-from-cart' order_item.item.slug %}"><i class="fas fa-trash float-right"></i></a>
+        </td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td colspan='5'>Your Cart Is Empty</td>
+    </tr>
+    <tr>
+        <a class="btn btn-primary" href="{% url 'core:index' %}">Continue Shopping</a>
+    </tr>
+    {% endfor %}
+    {% if object.get_total %}
+        <tr>
+            <th>TOTAL</th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th>{{ object.get_total }}</th>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <a class="btn btn-warning ml-2" href='#'>Proceed to Checkout</a>
+                <a class="btn btn-primary" href="{% url 'core:index' %}">Continue Shopping</a>
+            </td>
+        </tr>
+    {% endif %}
+    </tbody>
+  </table>
+
+</div>
+
+{% endblock %}
+
+{% block jsblock %}
+	<!-- jQuery Plugins -->
+	<script src="{% static 'homepage/js/jquery.min.js' %}"></script>
+	<script src="{% static 'homepage/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'homepage/js/slick.min.js' %}"></script>
+	<script src="{% static 'homepage/js/nouislider.min.js' %}"></script>
+	<script src="{% static 'homepage/js/jquery.zoom.min.js' %}"></script>
+	<script src="{% static 'homepage/js/main.js' %}"></script>
+
+{% endblock %}
