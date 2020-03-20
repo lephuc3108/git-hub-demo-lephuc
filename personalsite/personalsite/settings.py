@@ -146,4 +146,4 @@ AUTHENTICATION_BACKENDS = (
 
 SITE_ID = 1
 
-django_heroku.settings(local())
+django_heroku.settings(locals())
