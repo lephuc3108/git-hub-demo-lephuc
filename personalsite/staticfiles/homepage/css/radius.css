@@ -1,0 +1,99 @@
+
+.banner-area {
+	background: url(../img/banner1.jpg);
+}
+
+.banner-area .overlay-bg {
+	background: rgba(2, 198, 200, 0.8);
+}
+
+.banner-content h1 {
+	font-size: 60px; 
+	border-bottom: 1.5px solid white;
+	font-weight: 100;
+  line-height: 1.2em;
+  margin-bottom: 20px;
+}
+
+.banner-content h3 {
+	font-weight: 100; 
+	font-size: 40px;
+}
+
+.section-heading {
+	padding: 30px 0 0 0; 
+	box-shadow: 0 3px 3px 0 rgba( 1,2,2,0.05);
+}
+
+.carousel-content h4 {
+	font-weight: 300;
+}
+
+.section-heading h2 {
+	text-align: center; 
+	color: grey; 
+	font-size: 33px; 
+	font-weight: 300; 
+	letter-spacing: 3px;
+}
+
+.stay-time {
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  width: 145px; 
+  height: 145px; 
+  color: #fff; 
+  border-radius: 50%; 
+  border: 10px solid #f1f2f7; 
+  margin-top: 25px; 
+  padding-top: 25px;
+  text-align: center; 
+}
+
+.light-violet {
+	background-color: #c0a9ea;
+	-webkit-transition: all .35s ease;
+	-moz-transition: all .35s ease;
+	-ms-transition: all .35s ease;
+	-o-transition: all .35s ease;
+	transition:  all .35s ease; 
+	
+}
+.light-orange {
+	background: #ffdf7c;
+}
+
+
+.education-item .edu-time {
+  font-size: 13px;
+  font-weight: 300;
+  text-transform: uppercase;
+  width: 115px; 
+  height: 115px; 
+  color: #fff; 
+  border-radius: 50%; 
+  border: 10px solid #f1f2f7; 
+  margin-top: 25px; 
+  padding-top: 25px;
+  text-align: center; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tab-thumb .exp-title {
+	color: #32323a;
+	font-size: 18px;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+.single-content p {
+	color: #8c8c8c;
+
+}
+
+.tab-thumb .company {
+	margin-top: 5px;
+	margin-left: 50px;
+}
