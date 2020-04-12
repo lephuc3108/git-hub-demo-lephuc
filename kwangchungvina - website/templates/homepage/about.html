@@ -1,0 +1,110 @@
+{% extends 'homepage/base.html' %}
+
+{% load static %}
+
+{% block cssblock %}
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Hind:400,700" rel="stylesheet">
+
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="{% static 'homepage/css/bootstrap.min.css' %}" />
+
+	<!-- Slick -->
+	<link type="text/css" rel="stylesheet" href="{% static 'homepage/css/slick.css' %}" />
+	<link type="text/css" rel="stylesheet" href="{% static 'homepage/css/slick-theme.css' %}" />
+
+	<!-- nouislider -->
+	<link type="text/css" rel="stylesheet" href="{% static 'homepage/css/nouislider.min.css' %}" />
+
+	<!-- Font Awesome Icon -->
+	<link rel="stylesheet" href="{% static 'homepage/css/font-awesome.min.css' %}">
+
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="{% static 'homepage/css/style.css' %}" />
+
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+{% endblock %}
+
+{% block content %}
+	
+
+	<!-- BREADCRUMB -->
+	<div id="breadcrumb">
+		<div class="container">
+			<ul class="breadcrumb">
+				<li><a href="#">Home</a></li>
+				<li class="active" style="color: #f00000;">Liên Hệ</li>
+			</ul>
+		</div>
+	</div>
+	<!-- /BREADCRUMB -->
+
+	<!-- section -->
+	<div class="section">
+		<!-- container -->
+		<div class="container">
+			<h3 style="margin-bottom: 55px; margin-left: -20px;">VỀ KWANGCHUNGVINA</h3>
+			<!-- row -->
+			<div class="row">
+				<div class="contact_contain" style="border-top: 2px solid #333; border-bottom: 1px solid #e5e5e5; padding: 40px;">
+				<div class="about-banner" style="text-align: center;">
+					<img src="{% static 'homepage/img/banner013.jpg' %}" />
+				</div>
+				<div class="about-contain" style="margin-top: 35px;">
+					<p>
+						
+						
+						<h4>CÔNG TY TNHH KWANG CHUNG VINA với kinh nghiệm và uy tín trong ngành sắt thép inox trong suốt 10 năm hoạt động với xưởng sản xuất đạt chất lượng cao tại Hàn Quốc.</h4>
+						<br/>
+						
+						Công ty TNHH KWANG CHUNG VINA chuyên nhập khẩu và phân phối các loại thép không gỉ (Inox) tại Việt Nam. Chúng tôi trân trọng gửi đến Quý công ty một số mặt hàng hiện tại Công ty chúng tôi đang kinh doanh:
+						<br/>
+						- Inox Cuộn độ dày từ 0.3mm đến 12.0mm.
+						<br/>
+						- Inox Tấm độ dày từ 0.3mm đến 16.0 mm.
+						<br/>
+						- Inox Ống, Hộp vuông, Hộp chữ nhật ,V góc,…
+						<br/>
+						- Phụ kiện Inox các loại,…
+						<br/>
+						- Inox theo đơn đặt hàng từ quý khách.
+						<br/>
+						- Chủng loại đa dạng: STS316, STS316L, STS304, STS304L, STS201, STS430,…
+						<br/>
+						- Bề mặt phong phú: BA, 2B, Hairline, NO.1, NO.4,…
+						<br/>
+						- Xuất xứ:  Hàn Quốc,
+						<br/>
+						Tất cả sản phẩm của chúng tôi có nguồn gốc xuất xứ rõ ràng  theo quy định của ngành . FORM C/O , POSCO MTC …
+						
+					 </p>
+				</div>
+				</div>
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /section -->
+
+{% endblock %}	
+
+{% block jsblock %}
+
+	<!-- jQuery Plugins -->
+	<script src="{% static 'homepage/js/jquery.min.js' %}"></script>
+	<script src="{% static 'homepage/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'homepage/js/slick.min.js' %}"></script>
+	<script src="{% static 'homepage/js/nouislider.min.js' %}"></script>
+	<script src="{% static 'homepage/js/jquery.zoom.min.js' %}"></script>
+	<script src="{% static 'homepage/js/main.js' %}"></script>
+
+{% endblock %}
